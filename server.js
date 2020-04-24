@@ -79,14 +79,14 @@ app.get('/support', function(req, res){
 })
 
 // Implement the pending reviews API endpoint
-app.get('/pending', function(req, res){
-  var pending = [
+app.get('/experience', function(req, res){
+  var experience = [
     {title : 'Misión - AIK', release: '2017', description: 'Dar las mejores soluciones en cuanto a servicio postventa y comercializaciòn de vehìculos en el sector de transporte', publication: ' '},
     {title : 'Visión - AIK', release: '2022', description: 'Ser el concesionario nùmero uno en ventas y en servicio postventas del paìs', publication : ' '},
     {title : 'Políticas de Calidad - AIK', release : '2016', description: 'Estamos comprometidos con los sistemas de gestión de calidad, medio ambiente, seguridad y salud en el trabajo; reconociendo la importancia del capital humano y asegurando el cumplimiento de los requisitos aplicables', publication : ' '},
     {title : 'Noticias - AIK', release : '2016', description: 'Leonardo Zambrano, Alejandra Ramos, Juan Bolaños', publication : ' '}
   ]
-  res.json(pending);
+  res.json(experience);
 })
 console.log("server listening through port: "+process.env.PORT);
 // Launch our API Server and have it listen on port 3000.
