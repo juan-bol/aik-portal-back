@@ -79,13 +79,14 @@ app.get('/support', function(req, res){
 })
 
 // Implement the pending reviews API endpoint
-app.get('/pending', function(req, res){
-  var pending = [
-    {title : 'Superman: Homecoming', release: '2017', score: 10, price: 'Chris Harris', publication: 'International Movie Critic'},
-    {title : 'Wonder Woman', release: '2017', score: 8, reviewer: 'Martin Thomas', publication : 'TheOne'},
-    {title : 'Doctor Strange', release : '2016', score: 7, reviewer: 'Anthony Miller', publication : 'ComicBookHero.com'}
+app.get('/experience', function(req, res){
+  var experience = [
+    {title : 'Misión - AIK', description: 'Dar las mejores soluciones en cuanto a servicio postventa y comercializaciòn de vehìculos en el sector de transporte'},
+    {title : 'Visión - AIK', description: 'Ser el concesionario nùmero uno en ventas y en servicio postventas del paìs'},
+    {title : 'Políticas de Calidad - AIK', description: 'Estamos comprometidos con los sistemas de gestión de calidad, medio ambiente, seguridad y salud en el trabajo; reconociendo la importancia del capital humano y asegurando el cumplimiento de los requisitos aplicables'},
+    {title : 'Noticias - AIK', description: 'Leonardo Zambrano, Alejandra Ramos, Juan Bolaños'}
   ]
-  res.json(pending);
+  res.json(experience);
 })
 console.log("server listening through port: "+process.env.PORT);
 // Launch our API Server and have it listen on port 3000.
