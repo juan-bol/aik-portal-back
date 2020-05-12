@@ -40,13 +40,15 @@ app.get('/buycars', function(req, res){
   res.json(vehicles);
 })
 
-//app.get('/', function(req, res, next) {   
-    //now you can call the get-driver, passing a callback function
-//    getMovies(function (err, moviesResult){ 
-       //you might want to do something is err is not null...      
-//       res.json(moviesResult);
-
-//    });
+app.get('/comerciales', function(req, res) {
+ var comercial = [
+    {titulo: 'Misión - AIK', imagen:'https://www.kia.com/content/dam/kwcms/gt/en/images/vehicles/gnb/kia-rio-sc.png' , texto: '', autor: 'Leonardo Zambrano'},
+    {titulo: 'Visión - AIK', imagen:'Vacìo', texto: 'Algo', autor: 'Alejandra Ramos'},
+    {titulo: 'Políticas de Calidad - AIK', imagen: '', texto: '', autor:'Juan Bolaños'}
+  ]
+//    getMovies(function (err, moviesResult){
+ res.json(comercial);
+    });
 //});
 
 // Implement the reviewers API endpoint
@@ -58,7 +60,7 @@ app.get('/vehicles', function(req, res){
     {name: 'Zoluto', description : 'Modern Car 1.6CC', avatar: 'https://www.kia.com/content/dam/kwcms/gt/en/images/vehicles/gnb/kia_ab_19my.png'},
     {name: 'Stringer', description: 'Modern Car 1.6CC', avatar: 'https://www.kia.com/content/dam/kwcms/co/es/images/showroom/stinger/kia-stinger.png'},
     {name: 'Ant-man', description: 'Modern Car 1.6CC', avatar : 'https://vignette.wikia.nocookie.net/marvelcinematicuniverse/images/4/4b/Luis%27_Van_%28Quantum_Tunnel%29.png/revision/latest/scale-to-width-down/310?cb=20181002134025'},
-    {name: 'Rioc Jatchbash', description : 'Modern Car 1.6CC', avatar : 'https://www.kia.com/content/dam/kwcms/gt/en/images/vehicles/gnb/kia-rio-sc.png'}
+    {name: 'Rioc Jatchbash', description : 'Modern Car 1.6CC', avatar :'https://www.kia.com/content/dam/kwcms/gt/en/images/vehicles/gnb/kia-rio-sc.png'}
   ];
 
   res.json(vehicles);
