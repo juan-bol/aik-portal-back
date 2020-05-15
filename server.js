@@ -34,7 +34,7 @@ connection.connect(function(err) {
     ['Ant-Man', '2015', '8', '70.000.000', 'Modern Car 1.0CC'],
     ['Rio Jatchbash', '2014', '10', '50.000.000', 'Modern Car 1.0CC']
   ];
-  con.query(insertbuyacar, [values], function (err, result) {
+  connection.query(insertbuyacar, [values], function (err, result) {
     if (err) throw err;
     console.log("Number of records inserted: " + result.affectedRows);
   });
@@ -46,7 +46,7 @@ connection.connect(function(err) {
     console.log("Table created");
   });
 
-  var insertvehicles = "INSERT INTO vehicles (title, description, avatar) VALUES ?";
+  var insertvehicles = "INSERT INTO vehicles (name, description, avatar) VALUES ?";
   var valuesvehicles = [
     ['Xerato', 'Modern Car 1.6CC', 'https://www.kia.com/content/dam/kwcms/co/es/images/shoppingtool/Cerato-Showroom.png'],
     ['Pikanto', 'Modern Car 1.0CC', 'https://www.kia.com/content/dam/kwcms/co/es/images/showroom/PicantoNew/kia-co-picanto-ja.png'],
@@ -56,7 +56,7 @@ connection.connect(function(err) {
     ['Ant-Man', 'Modern Car 1.0CC', 'https://vignette.wikia.nocookie.net/marvelcinematicuniverse/images/4/4b/Luis%27_Van_%28Quantum_Tunnel%29.png/revision/latest/scale-to-width-down/310?cb=20181002134025'],
     ['Rio Jatchbash', 'Modern Car 1.0CC', 'https://www.kia.com/content/dam/kwcms/gt/en/images/vehicles/gnb/kia-rio-sc.png']
   ];
-  con.query(insertvehicles, [valuesvehicles], function (err, result) {
+  connection.query(insertvehicles, [valuesvehicles], function (err, result) {
     if (err) throw err;
     console.log("Number of records inserted: " + result.affectedRows);
   });
@@ -77,7 +77,7 @@ connection.connect(function(err) {
     ['New AIK', 'glyphicon-heart-empty'],
     ['safety campaigns', 'glyphicon-globe']
   ];
-  con.query(insertsupport, [valuessupport], function (err, result) {
+  connection.query(insertsupport, [valuessupport], function (err, result) {
     if (err) throw err;
     console.log("Number of records inserted: " + result.affectedRows);
   });
@@ -96,7 +96,7 @@ connection.connect(function(err) {
     ['Políticas de Calidad - AIK','Estamos comprometidos con los sistemas de gestión de calidad, medio ambiente, seguridad y salud en el trabajo; reconociendo la importancia del capital humano y asegurando el cumplimiento de los requisitos aplicables'],
     ['Noticias - AIK','Leonardo Zambrano, Alejandra Ramos, Juan Bolaños']
   ];
-  con.query(insertexperience, [valuesexperience], function (err, result) {
+  connection.query(insertexperience, [valuesexperience], function (err, result) {
     if (err) throw err;
     console.log("Number of records inserted: " + result.affectedRows);
   });
@@ -114,7 +114,7 @@ connection.connect(function(err) {
     ['Visión - AIK', 'Vacìo', 'Algo',  'Alejandra Ramos'],
     ['Políticas de Calidad - AIK', '', '', 'Juan Bolaños']
   ];
-  con.query(insertcomerciales, [valuescomerciales], function (err, result) {
+  connection.query(insertcomerciales, [valuescomerciales], function (err, result) {
     if (err) throw err;
     console.log("Number of records inserted: " + result.affectedRows);
   });
